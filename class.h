@@ -11,9 +11,9 @@ public:
     string name;
     string surname;
     int num_of_votes;
-    int percent;
+    int percent_of_votes;
 
-    void setCandidate() 
+    void SetCandidate() 
     {
         cout << "Name of the candidate: ";
         cin >> name;
@@ -24,14 +24,14 @@ public:
         cout << endl;
     }
 
-    void print() 
+    void Print() 
     {
-        cout << name << " " << surname << " has " << percent << "% of votes" << endl;
+        cout << name << " " << surname << " has " << percent_of_votes << "% of votes" << endl;
     }
 
 };
 
-bool comp(Candidate &a, Candidate &b) 
+bool Comp(Candidate &a, Candidate &b) 
 { 
  return (a.num_of_votes < b.num_of_votes); 
 }
@@ -44,7 +44,7 @@ private:
     
 public: 
     
-    void addCandidate (Candidate &c) 
+    void AddCandidate (Candidate &c) 
     {
         candidates.push_back(c);
     }
@@ -60,23 +60,23 @@ public:
     void VotesPercent ()
     {
         for (auto &i : candidates) {
-            i.percent = (i.num_of_votes*100)/summ;
+            i.percent_of_votes = (i.num_of_votes*100)/summ;
         }
     } 
 
 
-    void print() 
+    void Print() 
     {
         for (auto i : candidates) {
-            i.print();
+            i.Print();
         }
     }
 
 
-    void getWinner() 
+    void GetWinner() 
     {
         cout << endl;
-        cout << "The winner is " << max_element(candidates.begin(), candidates.end(), comp)->name << " " << max_element(candidates.begin(), candidates.end(), comp)->surname;
+        cout << "The winner is " << max_element(candidates.begin(), candidates.end(), Comp)->name << " " << max_element(candidates.begin(), candidates.end(), Comp)->surname;
     }
 
 };   
