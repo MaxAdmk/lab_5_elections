@@ -8,31 +8,31 @@ int main()
 {
     
     Candidate First;
-    First.setCandidate();
+    First.SetCandidate();
 
     Candidate Second;
-    Second.setCandidate();
+    Second.SetCandidate();
 
     Candidate Third;
-    Third.setCandidate();
+    Third.SetCandidate();
 
     Candidate Fourth;
-    Fourth.setCandidate();
+    Fourth.SetCandidate();
 
     Candidate Fifth;
-    Fifth.setCandidate();
+    Fifth.SetCandidate();
     
     Elections Rayon;
-    Rayon.addCandidate(First);
-    Rayon.addCandidate(Second);
-    Rayon.addCandidate(Third);
-    Rayon.addCandidate(Fourth);
-    Rayon.addCandidate(Fifth);
+    Rayon.AddCandidate(First);
+    Rayon.AddCandidate(Second);
+    Rayon.AddCandidate(Third);
+    Rayon.AddCandidate(Fourth);
+    Rayon.AddCandidate(Fifth);
     Rayon.VotesSumm();
     Rayon.VotesPercent();
-    Rayon.print();
+    Rayon.Print();
 
-    Rayon.getWinner();
+    Rayon.GetWinner();
     
     return 0;
 }
